@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 1</title>
+  <style>
+		body {background-color: powderblue;}
+	</style>
+
+</head>
+<body>
+	<h2>Hello</h2>
+	
+	<p> 
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tempor nec feugiat nisl. Integer eget aliquet nibh praesent tristique magna sit amet.
+	</p>
+
+	<form action="action.php" method="post">
+	    <label for="border">Border</label><br>
+	    <input type="text" id="border-r" size="5" id="border">
+	    <input type="text" id="border-g" size="5" id="border">
+	    <input type="text" id="border-b" size="5" id="border"><br><br>
+
+		<label for="bg">Background Color</label><br>
+	    <input type="text" id="bg-r" size="5" id="background">
+	    <input type="text" id="bg-g" size="5" id="background">
+	    <input type="text" id="bg-b" size="5" id="background"><br><br><br>
+
+	    <button type="button" onclick="myFunction()">Save</button>
+	</form>
+
+	<script>
+		function myFunction()
+		{
+		//get the border values
+		r1 = document.getElementById("border-r").value;
+		g1 = document.getElementById("border-g").value;
+		b1 =  document.getElementById("border-b").value;
+		
+		color1 = "rgb(" + r1 + ", " + g1 + ", " + b1 + ")";
+		document.body.style.borderColor = color1;
+
+
+		r2 = document.getElementById("bg-r").value;
+		console.log(r2);
+		g2 = document.getElementById("bg-g").value;
+		b2 = document.getElementById("bg-b").value;
+
+		color2 = "rgb(" + r2 + ", " + g2 + ", " + b2 + ")";
+		document.body.style.backgroundColor = color2;
+		
+		};
+		
+	</script>
+</body>
+</html>
